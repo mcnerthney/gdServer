@@ -17,10 +17,23 @@ grunt compile-server - build-server, compile-applets, deploy-applets
 
 - considerations:
 
+build a universal router table that's loaded into all the applets.
+
+    .net/static/gdRouter/route.jsom
+    router lookup depends upon /api/route/state - product, target
+    
+runtime support to build css/html urls using product,target,language,theme
+
+    longlived cache that expires on version change)
+
 manage /static directories.
-    put /gdClient code in a version controlled location such as .net/static/0.0.0/
+
     put /:applet/bin in .net/static/applet/:applet
+    for now, each client has it's own copy of gdClient. KISS
+    optimizations puts /gdClient code in a shared version controlled location such as .net/static/gdClient/0.0.0/
+
 manage .net build sources
+
     put /:applet/bin/index.html in .net/view/:applet/index.html, add this file to .csproj
 
 .net /api must be backward compatible and support all versions of /gdClient code.
