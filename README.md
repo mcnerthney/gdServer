@@ -1,19 +1,18 @@
-# .net solution - C# code that implements the /api.
+# gdServer
 
-- the build creates a collection of .net Index.html pages one for each angular app this web site hosts.
+This project contains the .csproj and C# code that implements the oneweb /api.  This project depends upon the ParterAPI.
+
+This project contains a build process that deploys to the .net server, all the supported applets, and moves the applets to a deployable location.
 
 
 
-grunt build-all  - bower install , build-applets, compile-applets, copy-applets to server
+## build commonds
 
-grunt build-applets - cd applet, npm install, bower install, grunt build.  - out /build (mock data)
-grunt compile-applets - cd applet, npm install, bower install, grunt build.  - out /bin
-
-grunt build-server  - .net build of /api
-
-grunt deploy-applets - copies applets/bin to .net /static
-
-grunt compile-server - build-server, compile-applets, deploy-applets
+    grunt build - build debug .net server
+    grunt compile - build release .net server
+    grunt compile-applets - - copies applets/bin to .net /static, moves applet/index.html to .net views - minified 
+    grunt build-applets - - copies applets/build to .net /static, moves applet/index.html to .net views - expanded
+    
 
 - considerations:
 
