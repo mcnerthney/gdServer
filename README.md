@@ -1,6 +1,6 @@
 # gdServer
 
-This is a the main project for the OneWeb .net web site. 
+The main project for the OneWeb .net web site. 
 
 This project contains the .csproj and C# code that implements the oneweb /api.  This /api depends upon the ParterAPI.
 
