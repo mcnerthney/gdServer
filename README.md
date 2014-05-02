@@ -1,4 +1,4 @@
-.net solution - C# code that implements the /api.
+# .net solution - C# code that implements the /api.
 
 - the build creates a collection of .net Index.html pages one for each angular app this web site hosts.
 
@@ -17,10 +17,10 @@ grunt compile-server - build-server, compile-applets, deploy-applets
 
 - considerations:
 
-build a universal router table that's loaded into all the applets.
+## build a universal router table that's loaded into all the applets.
 
     .net/static/gdRouter/route.jsom
-    router lookup depends upon /api/route/state - product, target
+router lookup depends upon /api/route/state - product, target
     
 runtime support to build css/html urls using product,target,language,theme
 
