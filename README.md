@@ -1,9 +1,10 @@
 # gdServer
 
-This project contains the .csproj and C# code that implements the oneweb /api.  This project depends upon the ParterAPI.
+This is a the main project files for the OneWeb .net web site. 
 
-This project contains a build process that deploys to the .net server, all the supported applets, and moves the applets to a deployable location.
+This project contains the .csproj and C# code that implements the oneweb /api.  This /api depends upon the ParterAPI.
 
+This project also contains a build process that deploys all the supported applets.
 
 
 ## build commonds
@@ -14,12 +15,41 @@ This project contains a build process that deploys to the .net server, all the s
     grunt build-applets - - copies applets/build to .net /static, moves applet/index.html to .net views - expanded
     
 
-- considerations:
+##  considerations:
 
-## build a universal router table that's loaded into all the applets.
+Support a universal router table that's loaded into all the applets.  The router resolves the URL's applet and path using a table indexed by a product id, and target.  The project id the retail partner.   The target is the screen type; such as mobile, tablet, desktop, and native.
 
-    .net/static/gdRouter/route.jsom
-router lookup depends upon /api/route/state - product, target
+
+    .net/static/gdRouter/route.json
+    routes = [
+    {
+        product_id: all,
+        target:     all,
+        path: '/login',
+        url:  '/view/appletGdLogin',
+    },
+    {
+        product_id: all,
+        target:     all,
+        path: '/dashboard',
+        url:  '/view/appletGdDashboard',
+    },
+    {
+        product_id: 'necktie',
+        target:     all,
+        path: '/dashboard',
+        url:  '/view/appletNecktieDashboard',
+    },
+    {
+        product_id: 'necktie',
+        target:     'small',
+        path: '/dashboard',
+        url:  '/view/appletNecktieMobileDashbaord',
+    }
+    ];
+    
+
+
     
 runtime support to build css/html urls using product,target,language,theme
 
