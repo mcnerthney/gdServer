@@ -24,68 +24,69 @@ Support a universal router table that's loaded into all the applets.  The router
     routes = [
     {
         product_id: all,
+        taget:      all,
+        path: "/",
+        view: "view/appletGdHome",
+    },
+    
+    {
+        product_id: all,
         target:     all,
         path: '/login',
-        url:  '/view/appletGdLogin',
+        view:  '/view/appletGdLogin',
     },
     {
         product_id: all,
         target:     all,
         path: '/dashboard',
-        url:  '/view/appletGdDashboard',
+        view:  '/view/appletGdDashboard',
     },
     {
         product_id: 'necktie',
         target:     all,
         path: '/dashboard',
-        url:  '/view/appletNecktieDashboard',
+        view:  '/view/appletNecktieDashboard',
     },
     {
         product_id: 'necktie',
         target:     'small',
         path: '/dashboard',
-        url:  '/view/appletNecktieMobileDashbaord',
+        view:  '/view/appletNecktieMobileDashbaord',
     }
     ];
     
 
 
     
-runtime support to build css/html urls using product,target,language,theme
+Runtime support for creating css/html urls based on product, target, language, and theme.  Also support caching that expires on version change.
 
-    longlived cache that expires on version change)
+Each applet has it's own copy of gdClient.  Use CDN for angular, jquery, and fonts caching.
 
-manage /static directories.
+Deploy all applets to .net/static pages.
 
-    put /:applet/bin in .net/static/applet/:applet
-    for now, each client has it's own copy of gdClient. KISS
-    optimizations puts /gdClient code in a shared version controlled location such as .net/static/gdClient/0.0.0/
+    cp /:applet/bin .net/static/applet/:applet
+    
 
-manage .net build sources
+Deploy applets' index page to .net view.  Add these index views to .csproj.  The .net web view router loaded the path's index pages.  For exampe /view/applet
 
-    put /:applet/bin/index.html in .net/view/:applet/index.html, add this file to .csproj
-
-.net /api must be backward compatible and support all versions of /gdClient code.
+    cp /:applet/bin/index.html .net/view/:applet/index.html,
 
 
-we don't update all the applet when we release a new version of the /gdClient code.
+We don't have to release all the applet, when we release a new version of the /gdClient code.
 
 
-Version numbering scheme
+# Version numbering scheme
 
-gdClient versions
- 1.1.0  - first release cycle (gd release 58)
- 1.1.1  - bug release (off cycle)
- 1.2.0  - next release cycle (gd release 59)
-
-appletGdLogin versions
- 1.1.0  - first release cycle(gd release 58)
- 1.2.0  - first release cycle(gd release 61)
- 1.2.1  - emergency bug fix (gd off-cycle release 62)
-
-appletGdDashboard versions
- 1.1.0  - first release cycle(gd release 58)
- 1.2.0  - first release cycle(gd release 59)
-
-appletNecktieDashboard version
- 1.1.0   - next year release
+    gdClient versions
+     1.1.0  - first release cycle (gd release 58)
+     1.1.1  - bug release (off cycle)
+     1.2.0  - next release cycle (gd release 59)
+    appletGdLogin versions
+     1.1.0  - first release cycle(gd release 58)
+     1.2.0  - first release cycle(gd release 61)
+     1.2.1  - emergency bug fix (gd off-cycle release 62)
+    appletGdDashboard versions
+     1.1.0  - first release cycle(gd release 58)
+     1.2.0  - second release cycle(gd release 59)
+    appletNecktieDashboard version
+     1.1.0   - next year's release
