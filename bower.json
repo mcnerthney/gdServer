@@ -1,0 +1,23 @@
+{
+  "name": "gdServer",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mcnerthney/gdServer",
+
+    "devDependencies": {
+        "appletGdLogin": "https://github.com/mcnerthney/appletGdLogin.git#v0.3.2-release",
+        "appletGdDashboard": "https://github.com/mcnerthney/appletGdDashboard.git#v0.3.2-release",
+        "appletNecktieDashboard": "https://github.com/mcnerthney/appletNecktieDashboard.git#v0.3.2-release"
+    },
+
+  "authors": [
+    "Dan McNerthney <dmcnerthney@greendotcorp.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"]
+}
