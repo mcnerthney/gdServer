@@ -7,7 +7,7 @@ This project contains the .csproj and C# code that implements the oneweb /api.  
 This project also contains a build process that deploys all the supported applets.
 
 
-## build commonds
+## build commands
 
     grunt build - build debug .net server
     grunt compile - build release .net server
