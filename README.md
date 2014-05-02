@@ -70,7 +70,7 @@ Deploy applets' index page to .net view.  Add these index views to .csproj.
 
     cp /:applet/bin/index.html .net/view/:applet/index.html,
 
-The .net web view router loads the applet's index pages.  For example, the path /view/appletNecktieDashboard/Double-Windsor/video responds with the /view/appletNeckTieDashboard/index.html file.
+The .net web view router loads the corresponding applet's index page.  For example, the path /view/appletNecktieDashboard/Double-Windsor/video responds with the /view/appletNecktieDashboard/index.html file.
 
 
 # Version number scheme
