@@ -73,20 +73,17 @@ Deploy applets' index page to .net view.  Add these index views to .csproj.
 The .net web view router loads the applet's index pages.  For example, the path /view/appletNecktieDashboard/Double-Windsor/video responds with the /view/appletNeckTieDashboard/index.html file.
 
 
-
-
-# Version numbering scheme
+# Version number scheme
 
     gdClient versions
-     1.1.0  - first release cycle (gd release 58)
-     1.1.1  - bug release (off cycle)
-     1.2.0  - next release cycle (gd release 59)
+     1.1.0  - first release cycle (p4 release 58)
+     1.2.0  - next release cycle (p4 release 59)
     appletGdLogin versions
-     1.1.0  - first release cycle(gd release 58)
-     1.2.0  - first release cycle(gd release 61)
-     1.2.1  - emergency bug fix (gd off-cycle release 62)
+     1.1.0  - first release cycle (p4 release 58)
+     1.2.0  - second release cycle (p4 release 61)
+     1.2.1  - emergency bug fix (p4 off-cycle)
     appletGdDashboard versions
-     1.1.0  - first release cycle(gd release 58)
-     1.2.0  - second release cycle(gd release 59)
+     1.1.0  - first release cycle (p4 release 58)
+     1.2.0  - second release cycle (p4 release 59)
     appletNecktieDashboard version
-     1.1.0   - next year's release
+     1.1.0   - next year's release (p4 release 66)
