@@ -56,23 +56,23 @@ Support a universal router table that's loaded into all the applets.  The router
     ];
     
 
-
-    
 Runtime support for creating css/html urls based on product, target, language, and theme.  Also support caching that expires on version change.
 
-Each applet has it's own copy of gdClient.  Use CDN for angular, jquery, and fonts caching.
+Each applet has it's own copy of gdClient.  We don't rebuild all applets when we create a new version of the /gdClient code.  
+Use CDN for angular, jquery, and fonts caching.
 
 Deploy all applets to .net/static pages.
 
     cp /:applet/bin .net/static/applet/:applet
     
 
-Deploy applets' index page to .net view.  Add these index views to .csproj.  The .net web view router loaded the path's index pages.  For exampe /view/applet
+Deploy applets' index page to .net view.  Add these index views to .csproj.  
 
     cp /:applet/bin/index.html .net/view/:applet/index.html,
 
+The .net web view router loads the applet's index pages.  For example, the path /view/appletNecktieDashboard/Double-Windsor/video responds with the /view/appletNeckTieDashboard/index.html file.
 
-We don't have to release all the applet, when we release a new version of the /gdClient code.
+
 
 
 # Version numbering scheme
