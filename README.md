@@ -56,7 +56,7 @@ Support a universal router table that's loaded into all the applets.  The router
     ];
     
 
-Runtime support for creating css/html urls based on product, target, language, and theme.  Also support caching that expires on version change.
+Applets support creating css/html urls based on product, target, language, and theme.  Also support caching that expires on version change.
 
 Each applet has it's own copy of gdClient.  We don't rebuild all applets when we create a new version of the /gdClient code.  
 Use CDN for angular, jquery, and fonts caching.
